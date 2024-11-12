@@ -1,3 +1,15 @@
+import mysql.connector
+
+# Informazioni di connessione al database (sostituisci con i tuoi dati)
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="Animali"
+)
+
+mycursor = mydb.cursor()
+
 # Inserimento di 5 animali
 sql = "INSERT INTO Mammiferi (Nome_Proprio, Razza, Peso, Eta) VALUES (%s, %s, %s, %s)"
 val = [
